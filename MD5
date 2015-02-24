@@ -1,7 +1,8 @@
-95f87131200e6b8b33ff6414282ac251 *DESCRIPTION
+1e6e6698e4f49daf243f458963b8a4fe *DESCRIPTION
 35e9e6cc74b2332ed1e2bb3da6dbf522 *LICENSE
 0c8d691daff972a02924a58b2e6f7ae4 *NAMESPACE
-afeddaa7a91f94a9f18f19bd85fdd56d *R/TableView.R
+750109211f64a99f96307396408fa6ea *NEWS
+d9a13b42ed238faa025385dd89f5ac36 *R/TableView.R
 0c155d2a5ea0641b7d57d7cb5609c17a *R/context.R
 3fed2c5849987846f4ad95c30734b80a *R/daff-package.r
 52662a07133badaaf873ccacc618a38d *R/diff-data.R
@@ -10,9 +11,9 @@ afeddaa7a91f94a9f18f19bd85fdd56d *R/TableView.R
 6eb8497592a2b88722ee949adb16d826 *R/read-diff.R
 87b637c0ba1ee38acc69cd3cb5228459 *R/render-diff.R
 8309cb0167d03b31f6152ff035502aad *R/utils.R
-69de5744f6d3d1745879a9208578c740 *README.md
+723a8b209df2155a1ff0c992cf3b7650 *README.md
 17657b7ebf3e51213c582acc1466eb2c *inst/js/daff.js
-cf034509d479013e4b5ffcee2a862544 *inst/js/util.js
+f28d105bddb5ff1a4d3a8607601f8c67 *inst/js/util.js
 14a880cf3115d5ebf23943fdbd59faa8 *man/daff.Rd
 8ab4d0a4604330635798c39536db2103 *man/diff_data.Rd
 465c20a2a81a00d6dcbd13119863e0ae *man/differs_from.Rd
@@ -22,7 +23,7 @@ d2dd88332b8fadb361321f9d2f8ecc1a *man/readwrite.Rd
 1d05a3330ef9ce516ba266d0b7632861 *man/render_diff.Rd
 209d1b142deaafb872c2e6884cd556ca *man/which_conflicts.Rd
 d2810b49c56371b60a5ece9f97dd8c83 *tests/testthat.R
-2405d10175904ccc5ba223b03e6f6b9f *tests/testthat/testdiff-data.R
+442619fa0bbdbd8d9cd1aeaa0638d7cf *tests/testthat/testdiff-data.R
 d1ab35e6ccd07e2d4e287fd1ce523f6a *tests/testthat/testmerge-data.R
 cffcc0cd1a14559b9ac490fb6fbc63bd *tests/testthat/testpatch-data.R
 e630013dd6df2446a7b204c133d13b43 *tests/testthat/testreadwrite.R
