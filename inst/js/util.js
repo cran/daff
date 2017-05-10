@@ -18,6 +18,7 @@ function to_array(table){
   return view;
 }
 
+/* x: TableView.data */
 function to_objects(x){
   var keys = x[0];
   var result = [];
@@ -27,17 +28,13 @@ function to_objects(x){
   return result;
 }
 
-function diff(src, target, ids, ignore, context, show_all){
-  var alignment = daff.compareTables(src,target).align();
-  var flags = new daff.CompareFlags();
-  flags.ids = ids;
-  flags.column_to_ignore = ignore;
-  flags.unchanged_context = context;
-  flags.show_unchanged = show_all
-  var highlighter = new daff.TableDiff(alignment,flags);
+function diff(src, target, flags){
+  var alignment = daff.compareTables(src, target).align();
+  var highlighter = new daff.TableDiff(alignment, flags);
   var data_diff = [];
   var table_diff = new daff.TableView(data_diff);
   highlighter.hilite(table_diff);
+  table_diff.summary = highlighter.getSummary()
   return table_diff;
 }
 
@@ -50,7 +47,7 @@ function from_csv(txt){
   var csv = new daff.Csv();
   var output = new daff.SimpleTable(0,0);
 	csv.parseTable(txt,output);
-	if(output != null) output.trimBlank();
+	if(output !== null) output.trimBlank();
 	return output;
 }
 
@@ -61,7 +58,7 @@ function patch_data(table, patch){
 }
 
 function merge_data(parent, a, b){
-  var flags = new daff.CompareFlags()
+  var flags = new daff.CompareFlags();
 	var merger = new daff.Merger(parent,a,b,flags); //add flags?
 	var conflicts = merger.apply();
   return {
@@ -72,7 +69,7 @@ function merge_data(parent, a, b){
 
 function render_diff(diff, fragment, pretty){
   fragment = !!fragment;
-  pretty = !!pretty
+  pretty = !!pretty;
 
   var renderer = new daff.DiffRender();
 	renderer.usePrettyArrows(pretty);
