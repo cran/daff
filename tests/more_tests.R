@@ -1,15 +1,18 @@
 library(daff)
-set.seed(42)
-
-df.orig <- data.frame(letters=letters,
-                     ints=1:26,
-                     doubles=(1:26)+0.5,
-                     factors=factor(LETTERS),
-                     LETTERS=LETTERS,
-                     lL=paste (letters, LETTERS),
-                     stringsAsFactors = FALSE,
-                     unchanged=paste0(letters, LETTERS)
-                     )
+# set.seed(42)
+#
+# df.orig <- data.frame(letters=letters,
+#                      ints=1:26,
+#                      doubles=(1:26)+0.5,
+#                      factors=factor(LETTERS),
+#                      LETTERS=LETTERS,
+#                      lL=paste (letters, LETTERS),
+#                      stringsAsFactors = FALSE,
+#                      unchanged=paste0(letters, LETTERS)
+#                      )
+# saveRDS(df.orig, file="tests/more_tests.Rds")
+# print(getwd())
+df.orig <- readRDS("more_tests.Rds")
 df.ref <- df.orig
 df     <- df.orig
 
@@ -185,3 +188,19 @@ do(unchanged_column_context=5)
 do(unchanged_context=0)
 do(unchanged_context=5)
 
+
+# add and reorder column
+df <- df.orig[, c(1:2, 4, 3, 5:7)]
+df <- cbind(df, added1=1:nrow(df.orig), added2=1:nrow(df.orig))
+do(df.ref, df)
+
+
+# test columns with duplicate names
+df.ref <- cbind(df.orig)
+df     <- cbind(df, df.orig)
+do()
+
+# test columns with duplicate names v2
+df.ref <- cbind(df.orig, df.orig)
+df     <- cbind(df,      df.orig)
+do()
