@@ -1,4 +1,4 @@
-d3c878037c90e6741dfbea6542fcac43 *DESCRIPTION
+c02dcaae8656d9d28aef28579435370e *DESCRIPTION
 532be5dcb4846e817008f268ee84789a *LICENSE
 f712f62184a2dc2928837df15b60c50b *NAMESPACE
 f1e7ff91b89ef6eaab2fcbb7d59709fd *NEWS.md
@@ -33,8 +33,7 @@ dd2057f4bf56e40dbe1661212f3a1d30 *man/merge_data.Rd
 bc49b03c85ad01b1624f26d011428b9e *man/readwrite.Rd
 1dd6ec8dca6bfede2521d0c79922f820 *man/render_diff.Rd
 4426488f3294c466a9c5a44d4b6693b6 *man/which_conflicts.Rd
-36d8548eca86bd2b4320b61cfbaa47b0 *tests/more_tests.R
-c65cf7ae927e3c51709ed94002196ac1 *tests/more_tests.Rds
+79b8c1f5f021c9076f32b7e63c2dee71 *tests/more_tests.R
 ae3fc537bf968b1d12cfe27d6ee54737 *tests/more_tests.Rout.save
 efb44e3b6b07bdb58a296f3f771d478d *tests/testthat.R
 af3ac22d0d1afdf513296ee08c0b4fdf *tests/testthat/test-print.R
