@@ -1,16 +1,26 @@
-# Daff: diff, patch and merge for data.frames
 
-daff is an R package that can find difference in values between `data.frames`, store this difference, render it and apply this difference to patch a `data.frame`. It can also merge two versions of a `data.frame` having a common parent.
-It wraps the [daff.js](http://paulfitz.github.io/daff/) library using the [V8 ](https://github.com/jeroenooms/v8) package.
-
-The diff format is described in https://paulfitz.github.io/daff-doc/spec.html.
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+<!-- badges: start -->
 
 ![version](http://www.r-pkg.org/badges/version/daff)
+[![R-CMD-check](https://github.com/edwindj/daff/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/edwindj/daff/actions/workflows/R-CMD-check.yaml)
 ![downloads](http://cranlogs.r-pkg.org/badges/daff)
-[![Build Status](https://travis-ci.org/edwindj/daff.svg?branch=master)](https://travis-ci.org/edwindj/daff)
-[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/edwindj/daff?branch=master)](https://ci.appveyor.com/project/edwindj/daff)
 
-Working:
+<!-- badges: end -->
+
+# Daff: diff, patch and merge for data.frames
+
+daff is an R package that can find difference in values between
+`data.frames`, store this difference, render it and apply this
+difference to patch a `data.frame`. It can also merge two versions of a
+`data.frame` having a common parent. It wraps the
+[daff.js](http://paulfitz.github.io/daff/) library using the
+[V8](https://github.com/jeroen/v8) package.
+
+The diff format is described in
+<https://paulfitz.github.io/daff-doc/spec.html>.
+
+Functions:
 
 - diff: `diff_data`
 - patch: `patch_data`
@@ -18,22 +28,13 @@ Working:
 - render to html: `render_diff`
 - merge two tables based on a same version: `merge_data`
 
-TODO:
+## Installation
 
-- add htmlwidgets
-- implement extra parameters for `diff_data`: `ids`, `ignore` etc.
-- make column type changes explicit (is now internally available)
-- see if daff can be implemented in C++, using the Haxe C++ target of daff: this would remove the V8/jsonlite dependency
+You can install the development version of daff from
+[GitHub](https://github.com/) with:
 
-# Install
-
-Install from CRAN
-```R
-install.packages('daff')
-```
-
-The latest version of `daff` can be installed with `devtools`
-```S
+``` r
+# install.packages("devtools")
 devtools::install_github("edwindj/daff")
 ```
 
@@ -42,7 +43,8 @@ devtools::install_github("edwindj/daff")
 ## diff_data
 
 Calculate the difference between a reference and a changed `data.frame`
-```R
+
+``` r
 library(daff)
 y <- iris[1:3,]
 x <- y
@@ -60,13 +62,18 @@ write_diff(patch, "patch.csv")
 
 `render_diff(patch)` will generate the following HTML page:
 
-![render_diff](tools/render_diff.png "render_diff")
-
+<figure>
+<img src="man/render_diff.png" title="render_diff" alt="render_diff" />
+<figcaption aria-hidden="true">
+render_diff
+</figcaption>
+</figure>
 
 ## patch_data
 
 Patch a `data.frame` using a diff generated with `diff_data`.
-```R
+
+``` r
 # read a diff from disk
 patch <- read_diff("patch.csv")
 
@@ -76,8 +83,10 @@ y_patched <- patch_data(y, patch)
 
 ## merge_data
 
-Merge two `data.frame`s that have diverged from a common parent `data.frame`.
-```R
+Merge two `data.frame`s that have diverged from a common parent
+`data.frame`.
+
+``` r
 parent <- a <- b <- iris[1:3,]
 a[1,1] <- 10
 b[2,1] <- 11
