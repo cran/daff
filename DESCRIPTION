@@ -1,5 +1,5 @@
 Package: daff
-Version: 1.0.1
+Version: 1.1.1
 Title: Diff, Patch and Merge for Data.frames
 Authors@R: c( person("Paul", "Fitzpatrick", email="paul@robotrebuilt.com", role=c("aut"),
                      comment="JavaScript original, http://paulfitz.github.io/daff/"),
@@ -18,7 +18,7 @@ Suggests: testthat
 RoxygenNote: 7.2.3
 Encoding: UTF-8
 NeedsCompilation: no
-Packaged: 2023-10-07 13:28:42 UTC; edwin
+Packaged: 2024-02-15 07:44:21 UTC; edwin
 Author: Paul Fitzpatrick [aut] (JavaScript original,
     http://paulfitz.github.io/daff/),
   Edwin de Jonge [aut, cre] (R wrapper,
@@ -26,4 +26,4 @@ Author: Paul Fitzpatrick [aut] (JavaScript original,
   Gregory R. Warnes [aut]
 Maintainer: Edwin de Jonge <edwindjonge@gmail.com>
 Repository: CRAN
-Date/Publication: 2023-10-08 19:20:02 UTC
+Date/Publication: 2024-02-15 09:40:02 UTC

@@ -1,9 +1,9 @@
-f8a20b8160003bc999e6a2e955681da1 *DESCRIPTION
+48467cc2669a16d21093bc1d4db622ce *DESCRIPTION
 532be5dcb4846e817008f268ee84789a *LICENSE
 f712f62184a2dc2928837df15b60c50b *NAMESPACE
-dcc0ad1d6273d2a19cc5f79c50cdd990 *NEWS.md
+ba844222a6cdb3bf87c5c6b3d61ba8dd *NEWS.md
 8a49fb1bfe2f6599fc908056408011e1 *R/TableView.R
-04af00c159d5c42f73e6531949c0aef5 *R/context.R
+d8f90e05e3224c8f41c88f6061f4bc7a *R/context.R
 c3c208cd38557ce0eb6fc0b5ce010161 *R/daff-package.r
 692956443abe9af2ff937a0629dd86a2 *R/diff-data.R
 87f8bc4042e0caacc36ef0809d972483 *R/merge-data.R
@@ -12,9 +12,10 @@ c3c208cd38557ce0eb6fc0b5ce010161 *R/daff-package.r
 b274ef2470b8058f752388d6e9fa6a41 *R/render-diff.R
 32809bd3998518fff00485ef2ff7eb3b *R/summary.R
 d8043e193638f02a067a0c9f8fb53b19 *R/utils.R
-30d25128947f27594828ace197ca5bba *README.md
+3a77f290053bfc7dd3050b19f8808932 *README.md
 7c7e1f6f7b0bc69a53da52a3d28293ee *inst/html_templates/render_diff.html
 9bf62bd684f125e099da5829006b5277 *inst/js/daff.js
+8ea712ba716a27c87ef857ee30bb4c96 *inst/js/underscore.js
 65cccd2aedbf9b42a177b56484ffdd28 *inst/js/util.js
 7645dedf12d8bb30733026505a678b05 *inst/useR2017/daff.Rmd
 028c124d2a7478d3385f8b10b341e2ff *inst/useR2017/daff.pdf
@@ -28,6 +29,7 @@ d41d8cd98f00b204e9800998ecf8427e *inst/useR2017/header.tex
 ff1b5e9566f4e2707dd22b8ae0bb9a14 *man/daff.Rd
 070744baf96709bb083cbffb68cf6861 *man/diff_data.Rd
 477241790d4d72e51667ee26b658b16b *man/differs_from.Rd
+cb6b5b9656f67b0a7bd85a5589323107 *man/figures/render_diff.png
 dd2057f4bf56e40dbe1661212f3a1d30 *man/merge_data.Rd
 4f4ef8dac81b96509b67a5d5dd70adb7 *man/patch_data.Rd
 bc49b03c85ad01b1624f26d011428b9e *man/readwrite.Rd
